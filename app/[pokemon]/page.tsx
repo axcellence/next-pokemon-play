@@ -7,7 +7,11 @@ interface Props {
   };
 }
 
-const colors = {
+interface Colors {
+  [key: string]: string;
+}
+
+const colors: Colors = {
   grass: "bg-gradient-to-br from-green-300 to-greem-600",
   fire: "bg-gradient-to-br from-red-300 to-red-600",
   water: "bg-gradient-to-br from-blue-300 to-blue-600",
