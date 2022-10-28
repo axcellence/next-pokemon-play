@@ -1,12 +1,6 @@
 import { Pokemon } from "../types";
 import Image from "next/image";
 
-interface Props {
-  params: {
-    pokemon: Pokemon;
-  };
-}
-
 interface Colors {
   [key: string]: string;
 }
@@ -32,7 +26,7 @@ const colors: Colors = {
   steel: "bg-gradient-to-br from-gray-300 to-gray-600",
 };
 
-export default async function PokemonPage({ params }: Props) {
+export default async function PokemonPage({ params }) {
   const pokemon = (await fetch(
     `https://pokeapi.co/api/v2/pokemon/${params.pokemon}`
   ).then((res) => res.json())) as Pokemon;
